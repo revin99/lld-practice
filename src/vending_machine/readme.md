@@ -5,7 +5,7 @@
 4. Provide interface for restocking any product
 
 
-##Entities
+## Entities
 
 1. Product class -> having id,name,price
 2. Money class -> total money, 10deno, 20 and 50 deno

@@ -1,0 +1,19 @@
+1. Vending machine should have list of products - quantity and price of each product
+2. Product should have name and price
+3. Admin can restock vending machine by adding/removing products
+4. User can request for a product, perform payment and get product.
+5. Vending machine can dispense change if available
+5. Vending machine should accept user request, ask for payment and dispense product
+
+
+Core entities
+1.Vending Machine
+2.Product
+3.Money
+4.Denomination
+
+
+Services
+1.Add stock to VM
+2.Request for product
+3.Ask for payment and return change if required.
