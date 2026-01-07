@@ -1,0 +1,12 @@
+package atm.state;
+
+import atm.ATMSystem;
+import atm.entities.OperationType;
+
+public interface ATMState {
+
+    void insertCard(ATMSystem atmSystem, String cardNumber);
+    void enterPin(ATMSystem atmSystem, int pin);
+    void selectOperation(ATMSystem atmSystem, OperationType op, int... args);
+    void ejectCard(ATMSystem atmSystem);
+}

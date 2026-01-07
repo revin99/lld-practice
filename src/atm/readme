@@ -1,0 +1,24 @@
+DESIGN ATM
+
+1. Login to account using PIN.
+2. Deposit money into bank account(after logged in)
+3. Withdraw money from bank account(after logged in)
+4. Check bank balance (after logged in)
+5. While withdrawal -> user mention total amount and ATM will dispense denomination and remove from bank balance
+6. While deposit -> User will push denomination and ATM will accept and add to bank balance
+7. ATM Has Money(fixed) and Bank account details
+
+
+Entities
+
+1. Denomination - 100,200,500
+2. Money - map of <denomination,integer> and has total amount
+3. Bank account - userid, pinid, money
+4. ATM Machine - has Money and list of bank account
+
+Services
+1. Different state of ATM - idle,loggedin,dispense,accepting money
+2.Idle state -> Accepts log in
+3. Loggedin state -> Accepts deposit request, withdrawal request and bank balance request. Fulfills bank balance request only
+4.Dispense state -> Sending money to user, removing from bank account and ATM and returns to idle
+5.Accepting state -> Takes money from user , adding to bankaccount and ATM and returns to idle
