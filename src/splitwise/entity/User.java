@@ -1,0 +1,33 @@
+package splitwise.entity;
+
+public class User {
+
+    private int id;
+    private String name;
+
+    private BalanceSheet balanceSheet;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BalanceSheet getBalanceSheet() {
+        return balanceSheet;
+    }
+
+    public void setBalanceSheet(BalanceSheet balanceSheet) {
+        this.balanceSheet = balanceSheet;
+    }
+}
