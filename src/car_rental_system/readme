@@ -1,0 +1,20 @@
+1. Abstract vehicle class -> Define data and method inside it
+2. Concrete vehicle classes on the abstract vehicle class
+3. Vehicle Factory class -> Create vehicle basis the type of vehicle
+
+1.Location class -> All details of location
+
+1.Rental Store class -> Has a location, list of cars,
+
+Reservation -> Details during each reservation
+
+Reservation Manager -> Handles reservation for user
+
+User class -> Each user in the system with list of reservation against him/her
+
+PaymentStrategy interface with different payments supported -> Each implementing original payment
+
+Rental system singleton class which has different managers for each action
+
+
+Main java class -> Orchestrator for all

@@ -1,0 +1,13 @@
+entities:
+
+snake item
+board - having walls
+food item
+
+
+pattern:
+singleton -> Board
+factory   -> creating new food item randomly
+strategy  -> Deciding snake movement
+Observer  -> To notify UI about score changes / game over condition
+
