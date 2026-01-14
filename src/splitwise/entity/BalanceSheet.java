@@ -1,5 +1,6 @@
 package splitwise.entity;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class BalanceSheet {
@@ -11,6 +12,17 @@ public class BalanceSheet {
         alice -> +10 (needs to give 10 to alice)
         bob -> -50 (needs to take 50 from bob)
      */
+
+    public BalanceSheet(User owner, Map<User, Double> balances) {
+        this.owner = owner;
+        this.balances = balances;
+    }
+
+    public BalanceSheet(User owner){
+        this.owner=owner;
+        balances = new HashMap<>();
+    }
+
     public void printBalance()
     {
         System.out.println("Printing balance for user " + owner.getName());
@@ -19,7 +31,7 @@ public class BalanceSheet {
 
         for (Map.Entry<User,Double> entry:balances.entrySet())
         {
-            System.out.println(entry.getKey() + "\t\t" + entry.getValue());
+            System.out.println(entry.getKey().getName() + "\t\t" + entry.getValue());
             totalowe+=entry.getValue();
         }
 
@@ -36,7 +48,9 @@ public class BalanceSheet {
     public void modifyBalance(User user, double amount)
     {
         if(owner.equals(user)) return;
+
         balances.merge(user,amount,Double::sum);
+       // this.owner.setBalanceSheet(new BalanceSheet(owner,balances));
     }
 
     public void pairBalance(User user)

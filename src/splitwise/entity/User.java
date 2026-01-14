@@ -30,4 +30,10 @@ public class User {
     public void setBalanceSheet(BalanceSheet balanceSheet) {
         this.balanceSheet = balanceSheet;
     }
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.balanceSheet = new BalanceSheet(this);
+    }
 }

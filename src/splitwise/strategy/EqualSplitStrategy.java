@@ -10,7 +10,7 @@ public class EqualSplitStrategy implements SplitStrategy{
     @Override
     public List<Split> calculateSplit(double amount, User paidBy, List<User> participants) {
 
-        int size = participants.toArray().length;
+        int size = participants.size();
 
         double eachUserAmount = amount/(size);
 

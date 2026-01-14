@@ -39,4 +39,10 @@ public class Group {
     public void setUsers(List<User> users) {
         this.users = users;
     }
+
+    public Group(int id, String name, List<User> users) {
+        this.id = id;
+        this.name = name;
+        this.users = users;
+    }
 }

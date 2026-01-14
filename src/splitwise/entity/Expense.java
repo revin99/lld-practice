@@ -12,8 +12,25 @@ public class Expense {
     private User paidBy;
     private List<Split> userList;
     private List<User> participants;
+    private List<Double> percentages;
 
-    public Expense(int id, double amount, String title, User paidBy, List<User> participants, List<Split> userList, SplitStrategy splitStrategy) {
+    public List<User> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(List<User> participants) {
+        this.participants = participants;
+    }
+
+    public List<Double> getPercentages() {
+        return percentages;
+    }
+
+    public void setPercentages(List<Double> percentages) {
+        this.percentages = percentages;
+    }
+
+    public Expense(int id, double amount, String title, User paidBy, List<User> participants, SplitStrategy splitStrategy) {
 
         this.id = id;
         this.amount = amount;
@@ -21,6 +38,16 @@ public class Expense {
         this.paidBy = paidBy;
         userList = splitStrategy.calculateSplit(amount,paidBy,participants);
 
+    }
+
+    public Expense(int id, double amount, String title, User paidBy, List<User> participants, List<Double> percentages, SplitStrategy splitStrategy) {
+        this.id = id;
+        this.amount = amount;
+        this.title = title;
+        this.paidBy = paidBy;
+        this.participants = participants;
+        this.percentages = percentages;
+        this.userList = splitStrategy.calculateSplit(amount,paidBy,participants,percentages);
     }
 
     public int getId() {
