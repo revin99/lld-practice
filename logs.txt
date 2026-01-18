@@ -1,0 +1,1 @@
+Using singleton Logger - Error messageUsing singleton Logger - Error messageUsing singleton Logger - Error message

@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Logger {
 
-    private Map<String,Logger> instances = new HashMap<>();
+    private static Map<String,Logger> instances = new HashMap<>();
     private LoggerConfig loggerConfig;
 
     private Logger(LogLevel logLevel, Appender logAppender){
