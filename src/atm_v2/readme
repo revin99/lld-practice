@@ -1,0 +1,36 @@
+Account
+1. map of card numbers to pin
+3. string name of user
+4. int account id
+5. int amount of money
+
+Card
+1. Linked to account -> From where u can get balance or add/remove money
+2. string card number
+
+
+ATM states(State pattern)
+
+1.idle state
+
+2.hascardstate
+
+3.depositmoney state
+4.creditmoney state
+5.show balance state
+
+6. maintenance
+
+
+ATM class -> Context to the states and also singleton class
+- atm has some money inside it at start
+- atm current state
+
+
+Main driver
+
+1st account -> 1st card -> link
+2nd account -> 2nd card -> link
+
+go to atm -> enter 1st card -> Enter pin (validation) -> Perform choice
+as per choice go to the 3 states and from each of the 3 states go back to idle state and return card
