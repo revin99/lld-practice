@@ -1,0 +1,35 @@
+HLD relationships
+Parking lot with multiple floors.
+Each floor has list of parking spots.
+Each parking spot has a type and size -> Small, Medium and Large
+Different type of vehicles can come -> Bike,smallcar,bigcar,truck
+
+Detailed relations
+Parking spot -> id, size , occupied or not,
+Parking floor -> Map of parking spotid -> parking spot, addVehicle, removeVehicle
+Vehicle -> License number, type, size etc
+
+//sample driver flow
+
+1. create many parking spots
+2. create parking floors -> assign spot to each floor
+3. create vechicles -> which are going to enter
+4. for each vehicle -> Create a ticket with start-time and fee strategy.
+   when creating ticket -> will assign park spot and park vechicle
+   assignment via (parking strategy) and after parking -> spot will be occupied
+5. at unpark -> calculate fee as per fee strategy.
+             -> free up the spot
+
+
+//fee strategy
+1. hourly fee strategy -> all vehicle find hourly time and multiplier
+2. basic fee strategy -> just during entry take specific price
+
+//find spot strategy
+1. find nearest spot as per the size
+2. find farthest spot as per the size
+
+
+//vechicle factory class -> create different types of vehicle
+//singleton parking lot -> having multiple parking floors
+//
