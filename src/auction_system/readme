@@ -1,0 +1,10 @@
+
+Users can register on the auction system
+Items can be added to auction system with some price
+
+Any one user can place a bid on an item -> Start an auction
+Other users can place increasing bids on the auction item.
+Once auction ends -> Winner declared with winner price
+
+Observer Pattern -> Update all users part of auction observers that price has changed
+State pattern -> determine what actions allowed on current auction.
